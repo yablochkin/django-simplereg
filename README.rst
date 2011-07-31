@@ -27,6 +27,7 @@ Step 3
 Set new authentication backend to allow login be email.
 
 ::
+
     AUTHENTICATION_BACKENDS = (
         'simplereg.backend.EmailAuthBackEnd',
         'django.contrib.auth.backends.ModelBackend',
