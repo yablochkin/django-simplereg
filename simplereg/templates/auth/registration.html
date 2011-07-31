@@ -1,0 +1,19 @@
+<h1>Registation</h1>
+
+<form method="post" action="">
+    {% csrf_token %}
+
+    <input type="hidden" name="next" value="/">
+
+    <table>
+        {{ form }}
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" value="Submit">
+            </td>
+        </tr>
+    </table>
+</form>
+
+<script type="text/javascript">document.getElementById("id_email").focus();</script>
