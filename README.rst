@@ -12,9 +12,9 @@ Step 1
 
 ::
 
-    $ pip install django-imagekit
+    $ pip install -e git://github.com/Bers/django-simplereg.git#egg=simplereg
 
-(or clone the source and put the imagekit module on your path)
+(or clone the source and put module on your path)
 
 Step 2
 ******
