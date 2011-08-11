@@ -7,7 +7,7 @@ import uuid
 
 
 class RegForm(forms.Form):
-    email = forms.EmailField(widget=forms.TextInput(attrs={'maxlength':75}), label=_('Email address'))
+    email = forms.EmailField(widget=forms.TextInput(attrs={'maxlength':75}), label=_('Email'))
     password = forms.CharField(widget=forms.PasswordInput(render_value=False), label=_('Password'))
 
     def clean_email(self):
