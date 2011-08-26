@@ -19,11 +19,6 @@ Step 1
 Step 2
 ******
 
-Add simplereg to INSTALLED_APPS in your settings.py
-
-Step 3 
-******
-
 Set new authentication backend to allow login be email.
 
 ::
@@ -33,7 +28,7 @@ Set new authentication backend to allow login be email.
         'django.contrib.auth.backends.ModelBackend',
     )
 
-Step 4
+Step 3
 ******
 
 Add views to urls.py
@@ -44,7 +39,10 @@ Add views to urls.py
     from simplereg.forms import LoginForm
     
     urlpatterns = patterns('',
-        url(r'^registration/$', 'simplereg.views.registration', name='registration'),
+        url(r'^registration/$', 'simplereg.views.registration', {
+                'template_name': 'registration.html',
+                'callback': None
+            }, name='registration'),
         url(r'^login/$', 'django.contrib.auth.views.login', {
                 'authentication_form': LoginForm
             }, name='login'),
