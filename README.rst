@@ -41,6 +41,7 @@ Add views to urls.py
     urlpatterns = patterns('',
         url(r'^registration/$', 'simplereg.views.registration', {
                 'template_name': 'registration.html',
+                'autologin': True,
                 'callback': None
             }, name='registration'),
         url(r'^login/$', 'django.contrib.auth.views.login', {
