@@ -19,6 +19,11 @@ Step 1
 Step 2
 ******
 
+Add simplereg to INSTALLED_APPS in your settings.py
+
+Step 3
+******
+
 Set new authentication backend to allow login be email.
 
 ::
@@ -28,7 +33,7 @@ Set new authentication backend to allow login be email.
         'django.contrib.auth.backends.ModelBackend',
     )
 
-Step 3
+Step 4
 ******
 
 Add views to urls.py
