@@ -29,6 +29,4 @@ def registration(request, template_name='auth/registration.html',
         'form': form
     }
     context.update(extra_context or {})
-    return direct_to_template(request, template_name, {
-            'form': form
-        })
+    return direct_to_template(request, template_name, context)
