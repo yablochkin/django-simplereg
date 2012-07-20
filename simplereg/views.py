@@ -17,7 +17,9 @@ def registration(request, template_name='auth/registration.html',
         user = form.save(request)
 
         if autologin:
-            user = authenticate(username=request.POST['email'], password=request.POST['password'])
+            email = form.cleaned_data['email']
+            password = form.cleaned_data['password']
+            user = authenticate(username=email, password=password)
             login(request, user)
 
         if callback:
