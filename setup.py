@@ -3,7 +3,7 @@ from distutils.core import setup
 
 setup(
     name='django-simplereg',
-    version='0.1',
+    version='0.2',
     description='Simple registation django app.',
     author='Eugeny Yablochkin',
     author_email='bers.com@gmail.com',
