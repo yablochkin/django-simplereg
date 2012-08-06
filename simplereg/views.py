@@ -2,6 +2,7 @@
 from django.views.generic.simple import direct_to_template
 from django.contrib.auth import authenticate, login, REDIRECT_FIELD_NAME
 from django.http import HttpResponseRedirect
+
 from simplereg.forms import RegForm
 
 
@@ -14,7 +15,7 @@ def registration(request, template_name='auth/registration.html',
 
     form = form_class(request.POST or None)
     if form.is_valid():
-        user = form.save(request)
+        user = form.save()
 
         if autologin:
             email = form.cleaned_data['email']
