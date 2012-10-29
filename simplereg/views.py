@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from django.views.generic.simple import direct_to_template
+from django.template.response import TemplateResponse
 from django.contrib.auth import authenticate, login, REDIRECT_FIELD_NAME
 from django.http import HttpResponseRedirect
 
@@ -32,4 +32,4 @@ def registration(request, template_name='auth/registration.html',
         'form': form
     }
     context.update(extra_context or {})
-    return direct_to_template(request, template_name, context)
+    return TemplateResponse(request, template_name, context)
